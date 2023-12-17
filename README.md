@@ -23,3 +23,28 @@ Remember: responsibility for re-rendering the page to display the updated list o
 - npm install recharts
 
 ### Initial application test
+- npm start
+
+
+# Rough In Frame-work
+src/
+├── components/
+    ├── Barchart.js
+    ├── Piechart.js 
+    ├── NavBar.js
+    ├── NavBar.css
+    ├── Header.js
+    ├── GoalForm.js
+    ├── Goal.js
+	
+└── pages/
+    ├── Home.js
+    ├── ControlledFormAddGoal.js
+    ├── GoalsDisplay.js
+    ├── GoalsDisplayByCategory.js -- Piechart ... Barchart Over Time?
+    ├── GoalsDisplayJustOne.js
+├── index.css
+├── index.js
+├── routes.js
+
+https://github.com/learn-co-curriculum/react-hooks-forms-lab/tree/solution/src/components
