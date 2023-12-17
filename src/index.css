@@ -1,3 +1,13 @@
+:root {
+  --magenta: rgb(210, 51, 210);
+  --cyan: rgb(98, 230, 230);
+  --yellow: rgb(237, 237, 32);
+  --font-color: rgb(33, 33, 33);
+  --font-color-light: rgb(155, 155, 155);
+  --background: rgb(255, 255, 255);
+  --background-light: rgb(230, 230, 230);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +20,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App.dark {
+  --font-color: rgb(255, 255, 255);
+  --background: rgb(50, 50, 50);
+  --background-light: rgb(101, 101, 101);
+  transition: all 0.3s;
+}
+
+.App {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  max-width: 600px;
+  background: var(--background);
+  color: var(--font-color);
+  box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+  border-radius: 10px;
 }

@@ -2,9 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
-
+import MyForm from './components/MyForm';
+import Header from './components/Header';
+import React, { useState } from 'react';
 
 function App() {
+
+  const [isDarkMode,setIsDarkMode] = useState(false)
+
+  function handleDarkModeClick() {
+    setIsDarkMode((isDarkMode) => !isDarkMode)
+  }
 
   const data = [
     {name:"Birds", value: 100000},
@@ -14,10 +22,18 @@ function App() {
   ];
 
   return (
+  
     <div style={{textAlign:"center"}} >
-              <h1>💗 Ben's Alltime Favorite Animals MVP  💗</h1>
-      <div className="App">
-
+             
+      <div className={"App " + (isDarkMode ? "dark" : "light")}>
+      <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
+      
+      <div>
+      <h1>Controlled  Form</h1>
+      <MyForm />
+    </div>
+    </div>
+    <div  className={"App " + (isDarkMode ? "dark" : "light")}/>
       <PieChart width={400} height={400}>
           <Pie
             dataKey="value"
@@ -31,7 +47,7 @@ function App() {
           />
           <Tooltip />
         </PieChart>
-
+    
         {/* <BarChart width={150} height={40} data={data}>
           <Bar dataKey="value" fill="#8884d8" />
         </BarChart> */}
@@ -56,7 +72,7 @@ function App() {
           <Bar dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
         </BarChart>
         </div>
-    </div>
+    
   );
 }
 
