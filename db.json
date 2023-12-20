@@ -30,5 +30,11 @@
         "name": "sail the atlantic",
         "category": "3 year plan"
       }
-    ]
+    ],
+    "animals": [
+        {"name":"Birds", "value": 100000},
+        {"name":"Cats", "value": 50000},
+        {"name":"Dogs", "value": 65000},
+        {"name":"Sloths", "value": 40008}
+      ]
 }

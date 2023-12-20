@@ -7,6 +7,7 @@ import Header from './components/Header';
 // import BarPlotOverTime from './components/BarChartOverTime';
 import React, { useState, useEffect } from 'react';
 // import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import Summary from './components/Summary';
 
 function App() {
 
@@ -18,7 +19,13 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("I ran")
+    const url = "http://localhost:4000/animals"
+    fetch(url,
+      {method: "GET",
+      headers: {"Content-Type":"application/json"}
+    })
+    .then((res) => res.json())
+    .then((dataa) => setData(dataa))
   },[])
 
   const animals = [
@@ -35,6 +42,7 @@ function App() {
     { date: "2023-04-01", value: 25 },
   ];
 
+  const animal_names = data.map((i)=> {return <p>{i.name}</p>})
 
   return (
   
@@ -42,6 +50,9 @@ function App() {
              
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
+      </div>
+      <div className={"App " + (isDarkMode ? "dark" : "light")}>
+      <Summary data={animal_names} />
       </div>
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <h1>Controlled  Form</h1>
@@ -62,7 +73,7 @@ function App() {
           <Pie
             dataKey="value"
             isAnimationActive={false}
-            data={data}
+            data={animals}
             cx="50%"
             cy="50%"
             outerRadius={80}
