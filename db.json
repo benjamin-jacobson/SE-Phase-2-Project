@@ -1,0 +1,34 @@
+{
+    "goals": [
+      {
+        "id": 1,
+        "name": "exercise",
+        "category": "daily"
+      },
+      {
+        "id": 2,
+        "name": "eat healthily",
+        "category": "daily"
+      },
+      {
+        "id": 3,
+        "name": "read",
+        "category": "daily"
+      },
+      {
+        "id": 4,
+        "name": "budget",
+        "category": "monthly"
+      },
+      {
+        "id": 5,
+        "name": "sail the atlantic",
+        "category": "bucketlist"
+      },
+      {
+        "id": 6,
+        "name": "sail the atlantic",
+        "category": "3 year plan"
+      }
+    ]
+}

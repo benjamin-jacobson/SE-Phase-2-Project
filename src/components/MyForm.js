@@ -5,7 +5,7 @@ const MyForm = () => {
   const [formData, setFormData] = useState({
     goal: '',
     metric: '',
-    category: '',
+    category: 'daily'
   });
 
   // Function to handle form input changes
@@ -46,16 +46,21 @@ const MyForm = () => {
         />
       </label>
       <br />
-      <label>
-      Category:
-        <input
-          type="category"
-          name="category"
+
+      <div>
+        <label htmlFor="selectedOption">Select a category:</label>
+        <select
+          id="selectedOption"
+          name="selectedOption"
           value={formData.category}
           onChange={handleInputChange}
-        />
-      </label>
-      <br />
+        >
+          <option value="daily">Daily</option>
+          <option value="monthly">Monthly</option>
+          <option value="3yearplan">3 Year Plan</option>
+          <option value="bucketlist">Bucket List</option>
+        </select>
+      </div>
       <button type="submit">Submit</button>
     </form>
   );

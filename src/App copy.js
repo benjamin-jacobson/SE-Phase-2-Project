@@ -5,23 +5,18 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import MyForm from './components/MyForm';
 import Header from './components/Header';
 // import BarPlotOverTime from './components/BarChartOverTime';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 function App() {
 
   const [isDarkMode,setIsDarkMode] = useState(false)
-  const [data, setData] = useState([])
 
   function handleDarkModeClick() {
     setIsDarkMode((isDarkMode) => !isDarkMode)
   }
 
-  useEffect(() => {
-    console.log("I ran")
-  },[])
-
-  const animals = [
+  const data = [
     {name:"Birds", value: 100000},
     {name:"Cats", value: 50000},
     {name:"Dogs", value: 65000},
