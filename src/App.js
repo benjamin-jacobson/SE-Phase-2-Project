@@ -4,7 +4,9 @@ import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import MyForm from './components/MyForm';
 import Header from './components/Header';
+// import BarPlotOverTime from './components/BarChartOverTime';
 import React, { useState } from 'react';
+// import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 function App() {
 
@@ -21,20 +23,37 @@ function App() {
     {name:"Sloths", value: 40008},
   ];
 
+  const datatime = [
+    { date: "2023-01-01", value: 10 },
+    { date: "2023-02-01", value: 20 },
+    { date: "2023-03-01", value: 15 },
+    { date: "2023-04-01", value: 25 },
+  ];
+
+
   return (
   
     <div style={{textAlign:"center"}} >
              
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
-      
-      <div>
+      </div>
+      <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <h1>Controlled  Form</h1>
       <MyForm />
     </div>
-    </div>
-    <div  className={"App " + (isDarkMode ? "dark" : "light")}/>
-      <PieChart width={400} height={400}>
+
+      <h2>Bar Plot Over Time</h2>
+      <BarChart width={200} height={300} data={datatime}>
+        <XAxis dataKey="date" type="category" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="value" fill="#8884d8" />
+      </BarChart>
+
+
+      <PieChart className={"App " + (isDarkMode ? "dark" : "light")} width={400} height={400}>
           <Pie
             dataKey="value"
             isAnimationActive={false}
@@ -52,7 +71,7 @@ function App() {
           <Bar dataKey="value" fill="#8884d8" />
         </BarChart> */}
 
-        <BarChart
+        <BarChart className={"App " + (isDarkMode ? "dark" : "light")}
           width={500}
           height={300}
           data={data}

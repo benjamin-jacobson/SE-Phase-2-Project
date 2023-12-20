@@ -21,9 +21,11 @@ Remember: responsibility for re-rendering the page to display the updated list o
 - npx create-react-app goal-project --use-npm
 - npm install react-router-dom@^6.18.0
 - npm install recharts
+- npm install json-server
 
 ### Initial application test
 - npm start
+- json-server --watch db.json --p 3000
 
 
 # Rough In Frame-work
