@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header({ isDarkMode, onDarkModeClick }) {
+function Title({ isDarkMode, onDarkModeClick }) {
   return (
     <header>
       <h1>💗 Goalster MVP  💗</h1>
@@ -11,4 +11,4 @@ function Header({ isDarkMode, onDarkModeClick }) {
   );
 }
 
-export default Header;
+export default Title;

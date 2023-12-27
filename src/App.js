@@ -3,11 +3,14 @@ import './App.css';
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import MyForm from './components/MyForm';
-import Header from './components/Header';
+import Title from './components/Title';
 // import BarPlotOverTime from './components/BarChartOverTime';
 import React, { useState, useEffect } from 'react';
 // import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import Summary from './components/Summary';
+
+import NavBar from "./components/NavBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
 
@@ -45,10 +48,14 @@ function App() {
 
   return (
   
-    <div style={{textAlign:"center"}} >a
+    <div style={{textAlign:"center"}} >
+      <header>
+        <NavBar />
+      </header>
+      <Outlet />
              
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
-      <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
+      <Title isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
       </div>
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Summary data={data} />
