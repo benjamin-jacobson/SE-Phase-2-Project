@@ -9,7 +9,7 @@ import React, { useState, useEffect } from 'react';
 // import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import Summary from './components/Summary';
 
-import NavBar from "./components/NavBar";
+import NavBar from "./archive/NavBar";
 import { Outlet } from "react-router-dom";
 
 function App() {

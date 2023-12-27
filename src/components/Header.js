@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/Header.css'
-import NavBar from "./NavBar";
+import NavBar from "../archive/NavBar";
 import { NavLink } from "react-router-dom";
 
 
@@ -21,22 +21,14 @@ function Header({ isDarkMode, onDarkModeClick }) {
               About
             </NavLink>
           </li>
+          <li>
+            <NavLink exact to="/reports" activeClassName="active-link">
+              Reports
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
   )}
-
-
-//   return (
-//     <header className="header-container">
-//       <h1>💗 Goalster MVP  💗</h1>
-//       {/* <NavBar /> */}
-      
-//       {/* <button onClick={onDarkModeClick}>
-//         {isDarkMode ? "Dark" : "Light"} Mode
-//       </button> */}
-//     </header>
-//   );
-// }
 
 export default Header;
