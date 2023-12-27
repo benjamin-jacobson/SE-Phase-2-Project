@@ -1,8 +1,9 @@
 import React from "react";
+import './Header.css'
 
-function Title({ isDarkMode, onDarkModeClick }) {
+function Header({ isDarkMode, onDarkModeClick }) {
   return (
-    <header>
+    <header className="header-container">
       <h1>💗 Goalster MVP  💗</h1>
       <button onClick={onDarkModeClick}>
         {isDarkMode ? "Dark" : "Light"} Mode
@@ -11,4 +12,4 @@ function Title({ isDarkMode, onDarkModeClick }) {
   );
 }
 
-export default Title;
+export default Header;
