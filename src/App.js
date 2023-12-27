@@ -29,12 +29,12 @@ function App() {
     .then((dataa) => setData(dataa))
   },[])
 
-  const animals = [
-    {name:"Birds", value: 100000},
-    {name:"Cats", value: 50000},
-    {name:"Dogs", value: 65000},
-    {name:"Sloths", value: 40008},
-  ];
+  // const animals = [
+  //   {name:"Birds", value: 100000},
+  //   {name:"Cats", value: 50000},
+  //   {name:"Dogs", value: 65000},
+  //   {name:"Sloths", value: 40008},
+  // ];
 
   const datatime = [
     { date: "2023-01-01", value: 10 },
@@ -45,13 +45,13 @@ function App() {
 
   return (
   
-    <div style={{textAlign:"center"}} >
+    <div style={{textAlign:"center"}} >a
              
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
       </div>
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
-      <Summary data={animals} />
+      <Summary data={data} />
       </div>
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <h1>Controlled  Form</h1>
@@ -72,7 +72,7 @@ function App() {
           <Pie
             dataKey="value"
             isAnimationActive={false}
-            data={animals}
+            data={data.animals}
             cx="50%"
             cy="50%"
             outerRadius={80}

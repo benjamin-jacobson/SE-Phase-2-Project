@@ -1,40 +1,58 @@
 {
-    "goals": [
-      {
-        "id": 1,
-        "name": "exercise",
-        "category": "daily"
-      },
-      {
-        "id": 2,
-        "name": "eat healthily",
-        "category": "daily"
-      },
-      {
-        "id": 3,
-        "name": "read",
-        "category": "daily"
-      },
-      {
-        "id": 4,
-        "name": "budget",
-        "category": "monthly"
-      },
-      {
-        "id": 5,
-        "name": "sail the atlantic",
-        "category": "bucketlist"
-      },
-      {
-        "id": 6,
-        "name": "sail the atlantic",
-        "category": "3 year plan"
-      }
-    ],
-    "animals": [
-        {"name":"Birds", "value": 100000},
-        {"name":"Cats", "value": 50000},
-        {"name":"Dogs", "value": 65000},
-        {"name":"Sloths", "value": 40008}
-      ]
+  "goals": [
+    {
+      "id": 1,
+      "name": "exercise",
+      "category": "daily"
+    },
+    {
+      "id": 2,
+      "name": "eat healthily",
+      "category": "daily"
+    },
+    {
+      "id": 3,
+      "name": "read",
+      "category": "daily"
+    },
+    {
+      "id": 4,
+      "name": "budget",
+      "category": "monthly"
+    },
+    {
+      "id": 5,
+      "name": "sail the atlantic",
+      "category": "bucketlist"
+    },
+    {
+      "id": 6,
+      "name": "sail the atlantic",
+      "category": "3 year plan"
+    },
+    {
+      "goal": "Finish Project 2",
+      "metric": "Within 7 days",
+      "category": "monthly",
+      "id": 7
+    }
+  ],
+  "animals": [
+    {
+      "name": "Birds",
+      "value": 100000
+    },
+    {
+      "name": "Cats",
+      "value": 50000
+    },
+    {
+      "name": "Dogs",
+      "value": 65000
+    },
+    {
+      "name": "Sloths",
+      "value": 40008
+    }
+  ]
 }

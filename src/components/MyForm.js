@@ -8,12 +8,12 @@ const MyForm = () => {
     category: 'daily'
   });
 
-  // Function to handle form input changes
+  // Handle form input changes
   const handleInputChange = (e) => {
-    const { goal, value } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [goal]: value,
+      [name]: value,
     });
   };
 
@@ -22,6 +22,24 @@ const MyForm = () => {
     e.preventDefault();
     // You can perform actions with the form data here (e.g., send it to a server)
     console.log('Form submitted with data:', formData);
+
+    // Posting data
+    const goalsUrl = "http://localhost:4000/goals"
+    fetch(goalsUrl, {
+      method: "POST",
+      headers: {"Content-Type":"application/json",
+    },
+    body:JSON.stringify(formData)
+    })
+    .then((r) => r.json())
+    .then((newRecord) => console.log(newRecord))
+    
+    // Clearning Form
+    setFormData(
+      {goal: '',
+        metric: '',
+        category: 'daily'}
+    )
   };
 
   return (
@@ -50,8 +68,8 @@ const MyForm = () => {
       <div>
         <label htmlFor="selectedOption">Select a category:</label>
         <select
-          id="selectedOption"
-          name="selectedOption"
+          id="category"
+          name="category"
           value={formData.category}
           onChange={handleInputChange}
         >
