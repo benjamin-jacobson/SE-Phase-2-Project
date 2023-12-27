@@ -14,7 +14,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
 
-  const [isDarkMode,setIsDarkMode] = useState(false)
+ c
   const [data, setData] = useState([])
 
   function handleDarkModeClick() {

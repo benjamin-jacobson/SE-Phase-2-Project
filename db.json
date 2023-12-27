@@ -35,6 +35,12 @@
       "metric": "Within 7 days",
       "category": "monthly",
       "id": 7
+    },
+    {
+      "goal": "sleep before 10",
+      "metric": "yes/no",
+      "category": "daily",
+      "id": 8
     }
   ],
   "animals": [
