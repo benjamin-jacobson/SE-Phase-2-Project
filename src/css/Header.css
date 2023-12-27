@@ -1,0 +1,24 @@
+.header-container {
+    background-color: #f8eded;
+    color: rgb(104, 92, 92);
+    padding: 10px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(234, 19, 19);
+  }
+  
+  .active-link {
+    font-weight: bold;
+  }
