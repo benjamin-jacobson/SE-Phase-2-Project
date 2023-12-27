@@ -1,11 +1,15 @@
 import React from "react";
+import SummaryList from "./SummaryList";
 
 function Summary({data}) {
+
   return (
-    <header>
-      <h1>Summary</h1>
-      {data}
-    </header>
+    <div>
+      <header>
+        <h1>Summary</h1>
+      </header>
+      <SummaryList data={data} />
+    </div>
   );
 }
 

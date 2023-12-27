@@ -18,6 +18,7 @@ function App() {
     setIsDarkMode((isDarkMode) => !isDarkMode)
   }
 
+  // Getting Data From JSON DB
   useEffect(() => {
     const url = "http://localhost:4000/animals"
     fetch(url,
@@ -42,8 +43,6 @@ function App() {
     { date: "2023-04-01", value: 25 },
   ];
 
-  const animal_names = data.map((i)=> {return <p>{i.name}</p>})
-
   return (
   
     <div style={{textAlign:"center"}} >
@@ -52,7 +51,7 @@ function App() {
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
       </div>
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
-      <Summary data={animal_names} />
+      <Summary data={animals} />
       </div>
       <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <h1>Controlled  Form</h1>
