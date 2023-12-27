@@ -2,6 +2,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Reports from "./pages/Reports";
+import GoalTracker from "./pages/GoalTracker";
 import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
@@ -10,8 +11,11 @@ const routes = [
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
-            {path:"/",
-            elemnent: <Home />
+            {path:"/goaltracker",
+            element: <GoalTracker />
+        },
+            {path:"/home",
+            element: <Home />
         },
         {
             path: "/about",

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Outlet } from "react-router-dom";
 
 import './css/App.css'; // Import your CSS file for global styling
-import { Outlet } from "react-router-dom";
+
 
 import Header from './components/Header';
 import Summary from './components/Summary';
@@ -30,12 +31,6 @@ function App(){
     <div className="app-container">
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
       <Outlet />
-      
-      <div className="grid-container">
-        <div className="grid-item"><p>Hi I am 1.</p></div>
-        <div className="grid-item">2</div>
-        <div className="grid-item">3</div>
-      </div>
     </div>
   );
 };

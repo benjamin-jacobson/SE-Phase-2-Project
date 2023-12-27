@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/Header.css'
-import NavBar from "../archive/NavBar";
+// import NavBar from "../archive/NavBar";
 import { NavLink } from "react-router-dom";
 
 
@@ -10,12 +10,21 @@ function Header({ isDarkMode, onDarkModeClick }) {
       <h1 className="logo">💗 Goalster MVP  💗</h1>
       <nav>
         <ul className="nav-links">
-          <li>
+        {/* <li>
             <NavLink exact to="/" activeClassName="active-link">
+              Root
+            </NavLink>
+          </li> */}
+          <li>
+            <NavLink exact to="/goaltracker" activeClassName="active-link">
+              GoalTracker
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact to="/home" activeClassName="active-link">
               Home
             </NavLink>
           </li>
-          {/* Add more NavLink items as needed */}
           <li>
             <NavLink exact to="/about" activeClassName="active-link">
               About
