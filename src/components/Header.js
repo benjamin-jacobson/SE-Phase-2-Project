@@ -10,11 +10,6 @@ function Header({ isDarkMode, onDarkModeClick }) {
       <h1 className="logo">💗 Goalster MVP  💗</h1>
       <nav>
         <ul className="nav-links">
-        {/* <li>
-            <NavLink exact to="/" activeClassName="active-link">
-              Root
-            </NavLink>
-          </li> */}
           <li>
             <NavLink exact to="/goaltracker" activeClassName="active-link">
               GoalTracker

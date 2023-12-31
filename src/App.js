@@ -17,7 +17,7 @@ function App(){
   }
 
   useEffect(() => {
-    const url = "http://localhost:4000/animals"
+    const url = "http://localhost:4000/goals"
     fetch(url,
       {method: "GET",
       headers: {"Content-Type":"application/json"}
@@ -27,10 +27,12 @@ function App(){
     .catch(error => console.error(error));
   },[])
 
+  console.log(data)
+
   return (
     <div className="app-container">
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
-      <Outlet />
+      <Outlet context={data}/>
     </div>
   );
 };

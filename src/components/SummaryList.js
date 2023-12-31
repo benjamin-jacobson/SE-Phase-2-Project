@@ -4,7 +4,7 @@ function SummaryList({data}) {
 
 const data_bullets = data.map((i) => {
   return (
-    <ul><li>{i.name}</li></ul>
+    <ul><li>{i.goal}</li></ul>
 
 )})
 
@@ -15,22 +15,3 @@ return (
 )
 }
 export default SummaryList;
-
-
-
-// import React from "react";
-
-// function SummaryList({data}) {
-
-// const data_bullets = data.map((i) => {
-//   return (
-//   <p>{i.name}</p>
-// )})
-
-// return (
-//   <div>
-//     {data_bullets}
-//   </div>
-// )
-// }
-// export default SummaryList;
