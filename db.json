@@ -35,6 +35,12 @@
       "metric": "abc",
       "category": "daily",
       "id": 12
+    },
+    {
+      "goal": "new3",
+      "metric": "vvv",
+      "category": "daily",
+      "id": 13
     }
   ],
   "animals": [

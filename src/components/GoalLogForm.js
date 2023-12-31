@@ -28,6 +28,7 @@ function GoalLogForm(){
   // const animalOptions = ['cat', 'dog'];
   const animalOptions = data3.map((i) => {return i.goal})
   const [selectedAnimal, setSelectedAnimal] = useState('cat');
+  const [selectedDate, setSelectedDate] = useState('');
 
   const handleSelectChange = (e) => {
     setSelectedAnimal(e.target.value);
@@ -35,13 +36,14 @@ function GoalLogForm(){
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Selected animal:', selectedAnimal);
+    console.log('Selected goal for logging:', selectedAnimal);
     // Additional form submission logic can go here
   }
 
   return (
     <div>
       <h1> Goal Logging Tool</h1>
+      <h1> Add database field on each goal as goalCompleted with boolean flag default to False. Then add filter below for each.Use start date goal created, goal start date, no by default, log yes</h1>
     <form onSubmit={handleSubmit}>
       <label htmlFor="animal">Choose a goal: </label>
       <select id="animgoalal" name="animgoalal" value={selectedAnimal} onChange={handleSelectChange}>
@@ -51,6 +53,17 @@ function GoalLogForm(){
           </option>
         ))}
       </select>
+      <br />
+      <label htmlFor="selectedDate">Select a date:</label>
+      <input
+        type="date"
+        id="selectedDate"
+        name="selectedDate"
+        value={selectedDate}
+        onChange={(e) => setSelectedDate(e.target.value)}
+        required
+      />
+
 
       <button type="submit">Submit</button>
       </form>
