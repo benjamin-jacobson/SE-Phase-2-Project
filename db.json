@@ -23,6 +23,18 @@
       "metric": "3 servings",
       "category": "daily",
       "id": 10
+    },
+    {
+      "goal": "Sweep floor",
+      "metric": "abc",
+      "category": "monthly",
+      "id": 11
+    },
+    {
+      "goal": "new2",
+      "metric": "abc",
+      "category": "daily",
+      "id": 12
     }
   ],
   "animals": [

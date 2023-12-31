@@ -1,6 +1,7 @@
 
 import { useOutletContext } from 'react-router-dom';
 import GoalAddForm from '../components/GoalAddForm'
+import GoalLogForm from '../components/GoalLogForm';
 
 function Home() {
 
@@ -12,6 +13,7 @@ function Home() {
           <h1>Home sweet home
           </h1>
           <GoalAddForm />
+          <GoalLogForm />
         </main>
       </>
     );

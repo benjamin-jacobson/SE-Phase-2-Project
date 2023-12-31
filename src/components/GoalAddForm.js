@@ -43,6 +43,8 @@ const MyForm = () => {
   };
 
   return (
+    <div>
+    <h1> Goal Adding Tool</h1>
     <form onSubmit={handleSubmit}>
       <label>
         Goal:
@@ -81,6 +83,7 @@ const MyForm = () => {
       </div>
       <button type="submit">Submit</button>
     </form>
+    </div>
   );
 };
 
