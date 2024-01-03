@@ -22,6 +22,7 @@ Remember: responsibility for re-rendering the page to display the updated list o
 - npm install react-router-dom@^6.18.0
 - npm install recharts
 - npm install json-server
+- npm install date-fns
 
 ### Initial application test
 - npm start

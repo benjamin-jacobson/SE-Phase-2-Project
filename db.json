@@ -47,6 +47,12 @@
       "metric": "Tough ",
       "category": "3yearplan",
       "id": 14
+    },
+    {
+      "goal": "fly a plane",
+      "metric": "yes no",
+      "category": "bucketlist",
+      "id": 15
     }
   ],
   "animals": [

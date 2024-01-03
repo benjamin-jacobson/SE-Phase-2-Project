@@ -4,10 +4,10 @@ import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 function PieChartzzz({data}){
 
   let countArr = [
-    { name: "daily", value: 1 },
-    { name: "monthly", value: 1 },
-    { name: "bucketlist", value: 1 },
-    { name:"3yearplan", value: 1}
+    { name: "daily", value: 0 },
+    { name: "monthly", value: 0 },
+    { name: "bucketlist", value: 0 },
+    { name:"3yearplan", value: 0}
   ];
   for (const c of data) {
     let val = c.category;
@@ -21,7 +21,7 @@ function PieChartzzz({data}){
   
   return (
     <div>
-      <h2>Pie Chart</h2>
+      <h2>Where are my goals focus on?</h2>
       <PieChart width={400} height={400}>
           <Pie
             dataKey="value"
