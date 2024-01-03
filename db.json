@@ -41,6 +41,12 @@
       "metric": "vvv",
       "category": "daily",
       "id": 13
+    },
+    {
+      "goal": "eat brocalli",
+      "metric": "Tough ",
+      "category": "3yearplan",
+      "id": 14
     }
   ],
   "animals": [

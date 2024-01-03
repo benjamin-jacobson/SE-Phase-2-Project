@@ -8,7 +8,8 @@ function Reports() {
   
   const [newData,setNewData] = useState([])
   useEffect(() => {
-    const url = "http://localhost:4000/animals"
+    // const url = "http://localhost:4000/animals"
+    const url = "http://localhost:4000/goals"
     fetch(url,
       {method: "GET",
       headers: {"Content-Type":"application/json"}
