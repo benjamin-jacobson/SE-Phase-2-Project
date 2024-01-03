@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
-import { eachDayOfInterval } from 'date-fns';
+import { eachDayOfInterval, format } from 'date-fns';
 
 const BarPlotOverTime = () => {
   // Fake data and array of dates
@@ -14,12 +14,13 @@ const BarPlotOverTime = () => {
 
 
 
-const startDate = new Date('2023-12-01');
+const startDate = new Date('2023-12-31');
 const endDate = new Date();
 
 const dateArray = eachDayOfInterval({ start: startDate, end: endDate });
+const formattedDateArray = dateArray.map(date => format(date, 'yyyy-MM-dd'));
 
-console.log(dateArray);
+console.log(formattedDateArray);
 
   return (
     <div>

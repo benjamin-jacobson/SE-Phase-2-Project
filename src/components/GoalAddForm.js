@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 const MyForm = () => {
   // State to manage form data
+  const currentDate = new Date().toISOString().split('T')[0];
+
   const [formData, setFormData] = useState({
     goal: '',
     metric: '',
-    category: 'daily'
+    category: 'daily',
+    creationDate: currentDate
+    
   });
 
   // Handle form input changes

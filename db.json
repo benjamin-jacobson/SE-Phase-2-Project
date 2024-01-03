@@ -4,55 +4,71 @@
       "goal": "Finish Project 2",
       "metric": "Within 7 days",
       "category": "monthly",
+      "creationDate": "2023-11-30",
       "id": 7
     },
     {
       "goal": "sleep before 10",
       "metric": "yes/no",
       "category": "daily",
+      "creationDate": "2023-12-04",
       "id": 8
     },
     {
       "goal": "Be consistent in vision and values",
       "metric": "Yes,No",
       "category": "daily",
+      "creationDate": "2023-12-05",
       "id": 9
     },
     {
       "goal": "Eat Vegetables",
       "metric": "3 servings",
       "category": "daily",
+      "creationDate": "2023-12-05",
       "id": 10
     },
     {
       "goal": "Sweep floor",
       "metric": "abc",
       "category": "monthly",
+      "creationDate": "2023-12-15",
       "id": 11
     },
     {
       "goal": "new2",
       "metric": "abc",
       "category": "daily",
+      "creationDate": "2023-12-28",
       "id": 12
     },
     {
       "goal": "new3",
       "metric": "vvv",
       "category": "daily",
+      "creationDate": "2023-12-30",
       "id": 13
     },
     {
       "goal": "eat brocalli",
       "metric": "Tough ",
       "category": "3yearplan",
+      "creationDate": "2024-01-01",
       "id": 14
     },
     {
       "goal": "fly a plane",
       "metric": "yes no",
       "category": "bucketlist",
+      "creationDate": "2024-01-03",
       "id": 15
+    },
+    {
+      "goal": "arggg",
+      "metric": "aaaa",
+      "category": "daily",
+      "creationDate": "2024-01-03",
+      "id": 17
     }
   ],
   "animals": [
