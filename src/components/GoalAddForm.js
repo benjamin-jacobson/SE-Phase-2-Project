@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const MyForm = () => {
   // State to manage form data
-  const currentDate = new Date().toISOString().split('T')[0];
+  const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
   const [formData, setFormData] = useState({
     goal: '',

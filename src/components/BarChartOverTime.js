@@ -3,9 +3,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 import { eachDayOfInterval, format } from 'date-fns';
 
-const BarPlotOverTime = () => {
+function BarPlotOverTime({data}){
   // Fake data and array of dates
-  const data = [
+  const dataFake = [
     { date: "2023-01-01", value: 10 },
     { date: "2023-02-01", value: 20 },
     { date: "2023-03-01", value: 15 },
@@ -25,7 +25,7 @@ console.log(formattedDateArray);
   return (
     <div>
       <h2>Bar Plot Over Time</h2>
-      <BarChart width={600} height={300} data={data}>
+      <BarChart width={600} height={300} data={dataFake}>
         <XAxis dataKey="date" type="category" />
         <YAxis />
         <Tooltip />
