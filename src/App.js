@@ -34,7 +34,7 @@ function App(){
 
   function LogGoalFunction(x){
     console.log(x)
-    // setData([...data, newGoal]) // Updating goal state.
+    // setData([...data, newGoal]) // Updating goal state by adding date to the ID array
   }
 
   console.log(data)

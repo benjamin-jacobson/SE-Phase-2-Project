@@ -91,6 +91,15 @@
       "completed": false,
       "creationDate": "2024-01-07",
       "id": 20
+    },
+    {
+      "goal": "not eat pizza",
+      "metric": "No Pizza Slices",
+      "category": "daily",
+      "datesGoalMet": [],
+      "completed": false,
+      "creationDate": "2024-01-07",
+      "id": 21
     }
   ],
   "animals": [

@@ -12,6 +12,7 @@ const MyForm = () => {
     goal: '',
     metric: '',
     category: 'daily',
+    datesGoalMet: [],
     completed: false,
     creationDate: currentDate
     

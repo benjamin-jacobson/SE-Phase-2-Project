@@ -32,7 +32,6 @@ function GoalLogForm(){
   const animalOptions = data.map((i) => {return i.goal})
   // const animalOptions = data.map((i) => {return {[i.id]: i.goal}})
   const [selectedAnimal, setSelectedAnimal] = useState('cat');
-  const [selectedDate, setSelectedDate] = useState('');
 
   const handleSelectChange = (e) => {
     setSelectedAnimal(e.target.value);
@@ -41,18 +40,34 @@ function GoalLogForm(){
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Selected goal for logging:', selectedAnimal);
+    console.log(e.target.value)
 
-    // function findIdByKeyValue(key, value) {
-    //   const foundObject = data.find(item => item[key] === value);
-    //   return foundObject ? foundObject.id : null;
-    // }
+    // Function to Get ID based on the goal selected
+    function findIdByKeyValue(key, value) {
+      const foundObject = data.find(item => item[key] === value);
+      return foundObject ? foundObject.id : null;
+    }
     
-    const idOfJane = findIdByKeyValue('name', 'Jane');
-    console.log(idOfJane); // Output: 2
+    const idOfJane = findIdByKeyValue('goal', selectedAnimal);
+    // console.log(idOfJane); // Output: 2
+    // console.log(selectedDate)
+    let ouputData = {idOfJane, selectedDate}
+
+    // UPDATE based on ID add date to array
+
+    // Update data state
+    LogGoalFunction(ouputData)
 
     
     // Additional form submission logic can go here
   }
+  const [selectedDate, setSelectedDate] = useState(null);
+  const handleDateChange = (event) => {
+    // The selected date will be available in the event.target.value
+    const dateValue = event.target.value;
+    setSelectedDate(dateValue);
+    // console.log(dateValue)
+  };
 
   return (
     <div>
@@ -68,13 +83,14 @@ function GoalLogForm(){
         ))}
       </select>
       <br />
-      <label htmlFor="selectedDate">Select a date:</label>
+      <label htmlFor="dateInput">Select a date:</label>
       <input
         type="date"
-        id="selectedDate"
-        name="selectedDate"
-        value={selectedDate}
-        onChange={(e) => setSelectedDate(e.target.value)}
+        id="dateInput"
+        // name="selectedDate"
+        // value={selectedDate}
+        // onChange={(e) => setSelectedDate(e.target.value)}
+        onChange={handleDateChange}
         required
       />
 

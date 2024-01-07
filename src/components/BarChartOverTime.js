@@ -7,9 +7,18 @@ function BarPlotOverTime({data}){
   // Fake data and array of dates
   const dataFake = [
     { date: "2023-01-01", value: 10 },
+    { date: "2023-01-02", value: 10 },
+    { date: "2023-01-03", value: 10 },
+    { date: "2023-01-04", value: 10 },
+    { date: "2023-01-18", value: 10 },
+    { date: "2023-01-19", value: 10 },
     { date: "2023-02-01", value: 20 },
     { date: "2023-03-01", value: 15 },
     { date: "2023-04-01", value: 25 },
+    { date: "2023-04-02", value: 0 },
+    { date: "2023-04-03", value: 0 },
+    { date: "2023-04-05", value: 25 },
+    { date: "2023-04-04", value: 25 },
   ];
 
 
