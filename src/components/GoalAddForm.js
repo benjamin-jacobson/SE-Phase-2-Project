@@ -3,7 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 
 const MyForm = () => {
 
-  const {data, AddGoalFunction} = useOutletContext();
+  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
   // State to manage form data
   const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
@@ -12,6 +12,7 @@ const MyForm = () => {
     goal: '',
     metric: '',
     category: 'daily',
+    completed: false,
     creationDate: currentDate
     
   });
@@ -52,7 +53,7 @@ const MyForm = () => {
 
   return (
     <div>
-    <h1> Goal Adding Tool</h1>
+    <h3> Goal Adding Tool</h3>
     <form onSubmit={handleSubmit}>
       <label>
         Goal:

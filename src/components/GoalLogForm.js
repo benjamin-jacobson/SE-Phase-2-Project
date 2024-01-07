@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 function GoalLogForm(){
   // State to manage form data
@@ -10,23 +11,26 @@ function GoalLogForm(){
 
   const [data3, setData3] = useState([])
 
-  useEffect(() => {
-    const url = "http://localhost:4000/goals"
-    fetch(url,
-      {method: "GET",
-      headers: {"Content-Type":"application/json"}
-    })
-    .then((res) => res.json())
-    .then((dataa) => setData3(dataa))
-    .catch(error => console.error(error));
-  },[])
+  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
-  console.log(data3)
+  // useEffect(() => {
+  //   const url = "http://localhost:4000/goals"
+  //   fetch(url,
+  //     {method: "GET",
+  //     headers: {"Content-Type":"application/json"}
+  //   })
+  //   .then((res) => res.json())
+  //   .then((dataa) => setData3(dataa))
+  //   .catch(error => console.error(error));
+  // },[])
 
-  const choices_goals = data3.map((i) => {return i.goal})
+  // console.log(data3)
+
+  const choices_goals = data.map((i) => {return i.goal})
 
   // const animalOptions = ['cat', 'dog'];
-  const animalOptions = data3.map((i) => {return i.goal})
+  const animalOptions = data.map((i) => {return i.goal})
+  // const animalOptions = data.map((i) => {return {[i.id]: i.goal}})
   const [selectedAnimal, setSelectedAnimal] = useState('cat');
   const [selectedDate, setSelectedDate] = useState('');
 
@@ -37,13 +41,23 @@ function GoalLogForm(){
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Selected goal for logging:', selectedAnimal);
+
+    // function findIdByKeyValue(key, value) {
+    //   const foundObject = data.find(item => item[key] === value);
+    //   return foundObject ? foundObject.id : null;
+    // }
+    
+    const idOfJane = findIdByKeyValue('name', 'Jane');
+    console.log(idOfJane); // Output: 2
+
+    
     // Additional form submission logic can go here
   }
 
   return (
     <div>
-      <h1> Goal Logging Tool</h1>
-      <h1> Add database field on each goal as goalCompleted with boolean flag default to False. Then add filter below for each.Use start date goal created, goal start date, no by default, log yes</h1>
+      <h3> Goal Logging Tool</h3>
+      <h1> Then add filter below for each.Use start date goal created, goal start date, no by default, log yes</h1>
     <form onSubmit={handleSubmit}>
       <label htmlFor="animal">Choose a goal: </label>
       <select id="animgoalal" name="animgoalal" value={selectedAnimal} onChange={handleSelectChange}>

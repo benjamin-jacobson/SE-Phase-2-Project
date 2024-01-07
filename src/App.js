@@ -29,13 +29,19 @@ function App(){
 
   function AddGoalFunction(newGoal){
     console.log(newGoal)
-    setData([...data, newGoal]) // Updating movies state.
+    setData([...data, newGoal]) // Updating goal state.
+  }
+
+  function LogGoalFunction(x){
+    console.log(x)
+    // setData([...data, newGoal]) // Updating goal state.
   }
 
   console.log(data)
 
   let contextData ={data: data, 
-                    AddGoalFunction: AddGoalFunction}
+                    AddGoalFunction: AddGoalFunction,
+                    LogGoalFunction: LogGoalFunction}
 
   return (
     <div className="app-container">
