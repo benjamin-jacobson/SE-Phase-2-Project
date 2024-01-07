@@ -53,7 +53,8 @@ function GoalLogForm(){
     // console.log(selectedDate)
     let ouputData = {idOfJane, selectedDate}
 
-    // UPDATE based on ID add date to array
+    // UPDATE PATCH based on ID add date to array
+    // Get the array using state, and update it.. who goal item or just key/value pair needed to update? TODO
 
     // Update data state
     LogGoalFunction(ouputData)
@@ -63,8 +64,8 @@ function GoalLogForm(){
   }
   const [selectedDate, setSelectedDate] = useState(null);
   const handleDateChange = (event) => {
-    // The selected date will be available in the event.target.value
-    const dateValue = event.target.value;
+   
+    const dateValue = event.target.value;  // The selected date  available in the event.target.value
     setSelectedDate(dateValue);
     // console.log(dateValue)
   };
@@ -87,9 +88,6 @@ function GoalLogForm(){
       <input
         type="date"
         id="dateInput"
-        // name="selectedDate"
-        // value={selectedDate}
-        // onChange={(e) => setSelectedDate(e.target.value)}
         onChange={handleDateChange}
         required
       />
