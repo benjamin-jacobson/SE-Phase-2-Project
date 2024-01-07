@@ -2,7 +2,7 @@ import Summary from "../components/Summary";
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
-function GoalTracker() {
+function AllGoals() {
   // let data = useOutletContext()
   const [data2, setData2] = useState([])
   useEffect(() => {
@@ -28,4 +28,4 @@ function GoalTracker() {
   );
 };
 
-export default GoalTracker;
+export default AllGoals;

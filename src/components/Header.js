@@ -3,21 +3,28 @@ import '../css/Header.css'
 // import NavBar from "../archive/NavBar";
 import { NavLink } from "react-router-dom";
 
-
 function Header({ isDarkMode, onDarkModeClick }) {
+
+  // const {data, AddGoalFunction} = useOutletContext();
+
   return (
     <header className="header-container">
       <h1 className="logo">💗 Goalster MVP  💗</h1>
       <nav>
         <ul className="nav-links">
           <li>
-            <NavLink exact to="/goaltracker" activeClassName="active-link">
-              GoalTracker
+            <NavLink exact to="/allgoals" activeClassName="active-link">
+              All Goals
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/home" activeClassName="active-link">
-              Home
+            <NavLink exact to="/addgoal" activeClassName="active-link">
+              Add Goal
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact to="/loggoal" activeClassName="active-link">
+              Log Goal
             </NavLink>
           </li>
           <li>

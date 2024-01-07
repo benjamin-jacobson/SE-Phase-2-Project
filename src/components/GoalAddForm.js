@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 const MyForm = () => {
+
+  const {data, AddGoalFunction} = useOutletContext();
+
   // State to manage form data
   const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
@@ -36,7 +40,7 @@ const MyForm = () => {
     body:JSON.stringify(formData)
     })
     .then((r) => r.json())
-    .then((newRecord) => console.log(newRecord))
+    .then((newRecord) => AddGoalFunction(newRecord))
     
     // Clearning Form
     setFormData(

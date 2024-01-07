@@ -1,8 +1,9 @@
 import App from "./App";
-import Home from "./pages/Home";
+import AddGoal from "./pages/AddGoal";
 import About from "./pages/About";
+import LogGoal from "./pages/LogGoal";
 import Reports from "./pages/Reports";
-import GoalTracker from "./pages/GoalTracker";
+import AllGoals from "./pages/AllGoals";
 import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
@@ -11,11 +12,14 @@ const routes = [
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
-            {path:"/goaltracker",
-            element: <GoalTracker />
+            {path:"/allgoals",
+            element: <AllGoals />
         },
-            {path:"/home",
-            element: <Home />
+            {path:"/addgoal",
+            element: <AddGoal />
+        },
+        {path:"/loggoal",
+        element: <LogGoal />
         },
         {
             path: "/about",

@@ -27,12 +27,20 @@ function App(){
     .catch(error => console.error(error));
   },[])
 
+  function AddGoalFunction(newGoal){
+    console.log(newGoal)
+    setData([...data, newGoal]) // Updating movies state.
+  }
+
   console.log(data)
+
+  let contextData ={data: data, 
+                    AddGoalFunction: AddGoalFunction}
 
   return (
     <div className="app-container">
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
-      <Outlet context={data}/>
+      <Outlet context={contextData}/>
     </div>
   );
 };

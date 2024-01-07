@@ -1,25 +1,23 @@
 
 import { useOutletContext } from 'react-router-dom';
 import GoalAddForm from '../components/GoalAddForm'
-import GoalLogForm from '../components/GoalLogForm';
 
-function Home() {
+function AddGoal() {
 
   // using App outlet to get data
   
     return (
       <>
         <main>
-          <h1>Home sweet home
+          <h1>Add a goal!
           </h1>
           <GoalAddForm />
-          <GoalLogForm />
         </main>
       </>
     );
   };
   
-  export default Home;
+  export default AddGoal;
 
     //     <div className="app-container">
     //             <h1> I am the home page </h1>
