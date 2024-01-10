@@ -36,20 +36,6 @@ function App(){
     console.log(x)
     console.log(data)
     console.log("----")
-    // setData([...data, newGoal]) // Updating goal state by adding date to the ID array
-    // Find the dictionary with id = 5
-//     const dictionaryWithId = data.find(item => item.id === x.idOfJane);
-
-// // Check if the dictionary was found
-//     if (dictionaryWithId) {
-//       // console.log(`Dictionary with id:${x}`);
-//       console.log(dictionaryWithId)
-//     } else {
-//       console.log(`Dictionary with id:${x}`);
-//     }
-
-//     // myArray = [...dictionaryWithId.datesGoalMet, 5];
-//     // console.log(myArray)
 
     const modifiedEmployees = data.map(obj => {
       if (obj.id === x.idOfJane) {

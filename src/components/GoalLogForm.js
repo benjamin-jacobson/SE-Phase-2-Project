@@ -2,36 +2,23 @@ import React, { useState, useEffect} from 'react';
 import { useOutletContext } from 'react-router-dom';
 
 function GoalLogForm(){
-  // State to manage form data
-  // const [formData, setFormData] = useState({
-  //   goal: '',
-  //   metric: '',
-  //   category: 'daily'
-  // });
-
-  // const [data3, setData3] = useState([])
 
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
-
-  // useEffect(() => {
-  //   const url = "http://localhost:4000/goals"
-  //   fetch(url,
-  //     {method: "GET",
-  //     headers: {"Content-Type":"application/json"}
-  //   })
-  //   .then((res) => res.json())
-  //   .then((dataa) => setData3(dataa))
-  //   .catch(error => console.error(error));
-  // },[])
-
-  // console.log(data3)
-
   const choices_goals = data.map((i) => {return i.goal})
 
-  // const animalOptions = ['cat', 'dog'];
   const animalOptions = data.map((i) => {return i.goal})
-  // const animalOptions = data.map((i) => {return {[i.id]: i.goal}})
-  const [selectedAnimal, setSelectedAnimal] = useState('cat');
+  const [selectedAnimal, setSelectedAnimal] = useState('cat')
+
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const handleDateChange = (event) => {
+   
+    const dateValue = event.target.value;  // The selected date available in the event.target.value
+    setSelectedDate(dateValue);
+    // console.log(dateValue)
+  };
+
+
 
   const handleSelectChange = (e) => {
     setSelectedAnimal(e.target.value);
@@ -40,35 +27,47 @@ function GoalLogForm(){
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Selected goal for logging:', selectedAnimal);
-    console.log(e.target.value)
+    console.log(e.target.value) // this is just the goal name
 
-    // Function to Get ID based on the goal selected
+    // Getting the ID from the form
     function findIdByKeyValue(key, value) {
       const foundObject = data.find(item => item[key] === value);
       return foundObject ? foundObject.id : null;
     }
-    
     const idOfJane = findIdByKeyValue('goal', selectedAnimal);
+
+
+    // let outputPatchedArray = [...data[idOfJane].datesGoalMet, selectedDate]
+    let outputPatchedArray = [...data.find(item => item.id === idOfJane)?.datesGoalMet, selectedDate]
+    // NEW 
+    // const modifiedEmployees = data.map(obj => {
+    //   if (obj.id === idOfJane) {
+    //       console.log("test")
+    //       console.log([...obj.datesGoalMet, selectedDate])
+    //       let outputPatchedArray = [...obj.datesGoalMet, selectedDate]
+    //       //return { ...obj, datesGoalMet: [...obj.datesGoalMet, selectedDate]};
+    //       return outputPatchedArray
+    //   }
+    //   return obj;
+    // });
+    console.log("carrrrrtttddgsgsfgf")
+    console.log(outputPatchedArray);
+    console.log("carrrrrtttddgsgsfgf")
+    // setData(modifiedEmployees)
+
+    // Function to Get ID based on the goal selected
+
     // console.log(idOfJane); // Output: 2
     // console.log(selectedDate)
     let ouputData = {idOfJane, selectedDate}
 
     // UPDATE PATCH based on ID add date to array
     // Get the array using state, and update it.. who goal item or just key/value pair needed to update? TODO
+    let url = `http://localhost:4000/goals/${idOfJane}`
 
     // Update data state in App
     LogGoalFunction(ouputData,data)
-
-    
-    // Additional form submission logic can go here
   }
-  const [selectedDate, setSelectedDate] = useState(null);
-  const handleDateChange = (event) => {
-   
-    const dateValue = event.target.value;  // The selected date  available in the event.target.value
-    setSelectedDate(dateValue);
-    // console.log(dateValue)
-  };
 
   return (
     <div>
