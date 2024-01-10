@@ -9,7 +9,7 @@ function GoalLogForm(){
   //   category: 'daily'
   // });
 
-  const [data3, setData3] = useState([])
+  // const [data3, setData3] = useState([])
 
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
@@ -56,8 +56,8 @@ function GoalLogForm(){
     // UPDATE PATCH based on ID add date to array
     // Get the array using state, and update it.. who goal item or just key/value pair needed to update? TODO
 
-    // Update data state
-    LogGoalFunction(ouputData)
+    // Update data state in App
+    LogGoalFunction(ouputData,data)
 
     
     // Additional form submission logic can go here
