@@ -64,9 +64,17 @@ function GoalLogForm(){
     // UPDATE PATCH based on ID add date to array
     // Get the array using state, and update it.. who goal item or just key/value pair needed to update? TODO
     let url = `http://localhost:4000/goals/${idOfJane}`
+    fetch(url,{
+        method: "PATCH",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({
+          datesGoalMet: outputPatchedArray})
+        })
+      .then((res) => res.json() )
+      .then((x) => console.log(x))
 
     // Update data state in App
-    LogGoalFunction(ouputData,data)
+    // LogGoalFunction(ouputData,data)
   }
 
   return (
