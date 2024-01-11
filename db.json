@@ -1,117 +1,63 @@
 {
   "goals": [
     {
-      "goal": "Finish Project 2",
-      "metric": "Within 7 days",
-      "category": "monthly",
-      "creationDate": "2023-11-30",
-      "id": 7
-    },
-    {
-      "goal": "sleep before 10",
-      "metric": "yes/no",
-      "category": "daily",
-      "creationDate": "2023-12-04",
-      "id": 8
-    },
-    {
-      "goal": "Be consistent in vision and values",
-      "metric": "Yes,No",
-      "category": "daily",
-      "creationDate": "2023-12-05",
-      "id": 9
-    },
-    {
-      "goal": "Eat Vegetables",
-      "metric": "3 servings",
-      "category": "daily",
-      "creationDate": "2023-12-05",
-      "id": 10
-    },
-    {
-      "goal": "Sweep floor",
-      "metric": "abc",
-      "category": "monthly",
-      "creationDate": "2023-12-15",
-      "id": 11
-    },
-    {
-      "goal": "new2",
-      "metric": "abc",
-      "category": "daily",
-      "creationDate": "2023-12-28",
-      "id": 12
-    },
-    {
-      "goal": "new3",
-      "metric": "vvv",
-      "category": "daily",
-      "creationDate": "2023-12-30",
-      "id": 13
-    },
-    {
-      "goal": "eat brocalli",
-      "metric": "Tough ",
-      "category": "3yearplan",
-      "creationDate": "2024-01-01",
-      "id": 14
-    },
-    {
-      "goal": "fly a plane",
-      "metric": "yes no",
-      "category": "bucketlist",
-      "creationDate": "2024-01-03",
-      "id": 15
-    },
-    {
-      "goal": "arggg",
-      "metric": "aaaa",
-      "category": "daily",
-      "creationDate": "2024-01-03",
-      "id": 17
-    },
-    {
-      "goal": "testme",
-      "metric": "ysno",
-      "category": "daily",
-      "creationDate": "2024-01-07",
-      "id": 18
-    },
-    {
-      "goal": "testagain2",
-      "metric": "vvv",
-      "category": "monthly",
-      "creationDate": "2024-01-07",
-      "id": 19
-    },
-    {
-      "goal": "test3333",
-      "metric": "ss",
-      "category": "bucketlist",
-      "completed": false,
-      "creationDate": "2024-01-07",
-      "id": 20
-    },
-    {
-      "goal": "not eat pizza",
-      "metric": "No Pizza Slices",
-      "category": "daily",
-      "datesGoalMet": [],
-      "completed": false,
-      "creationDate": "2024-01-07",
-      "id": 21
-    },
-    {
-      "goal": "fffff",
+      "goal": "First Goal Ever",
       "metric": "useardd",
       "category": "daily",
       "datesGoalMet": [
         "2024-01-28",
-        "2024-01-23"
+        "2024-01-23",
+        "2024-01-20"
       ],
       "completed": false,
       "creationDate": "2024-01-10",
-      "id": 22
+      "id": 1
+    },
+    {
+      "goal": "another goodie",
+      "metric": "dailysssdfasd",
+      "category": "daily",
+      "datesGoalMet": [
+        "2024-01-25"
+      ],
+      "completed": false,
+      "creationDate": "2024-01-11",
+      "id": 2
+    },
+    {
+      "goal": "Clean Car",
+      "metric": "yes/no",
+      "category": "monthly",
+      "datesGoalMet": [
+        "2024-01-26",
+        "2024-01-31"
+      ],
+      "completed": false,
+      "creationDate": "2024-01-11",
+      "id": 3
+    },
+    {
+      "goal": "Plan Party",
+      "metric": "yes/no",
+      "category": "3yearplan",
+      "datesGoalMet": [],
+      "completed": false,
+      "creationDate": "2024-01-11",
+      "id": 4
+    },
+    {
+      "goal": "Have 10000000000",
+      "metric": "yes/no",
+      "category": "bucketlist",
+      "datesGoalMet": [
+        "2024-01-30",
+        "2024-01-31",
+        "2024-02-20",
+        "2024-02-20"
+      ],
+      "completed": false,
+      "creationDate": "2024-01-11",
+      "id": 5
     }
   ],
   "animals": [
