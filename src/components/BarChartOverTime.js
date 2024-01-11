@@ -1,11 +1,14 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
-
 import { eachDayOfInterval, format } from 'date-fns';
+import { useOutletContext } from 'react-router-dom';
 
-function BarPlotOverTime({data}){
+function BarPlotOverTime({goalToShow}){
+
+  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
+
   // Fake data and array of dates
-  const dataFake = [
+  const dataFake = [   //// Need to convert the goal to this
     { date: "2023-01-01", value: 10 },
     { date: "2023-01-02", value: 10 },
     { date: "2023-01-03", value: 10 },
@@ -33,6 +36,7 @@ console.log(formattedDateArray);
 
   return (
     <div>
+      <h2>I am in the chart not the comp {goalToShow}</h2>
       <h2>Bar Plot Over Time</h2>
       <BarChart width={600} height={300} data={dataFake}>
         <XAxis dataKey="date" type="category" />

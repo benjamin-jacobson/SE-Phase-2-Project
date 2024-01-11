@@ -4,6 +4,8 @@ import { useOutletContext } from "react-router-dom";
 
 function AllGoals() {
   // let data = useOutletContext()
+  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();   // make it just this TODO get rid of useeffect
+
   const [data2, setData2] = useState([])
   useEffect(() => {
     const url = "http://localhost:4000/goals"

@@ -1,7 +1,10 @@
 import React from 'react';
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import { useOutletContext } from 'react-router-dom';
 
-function PieChartzzz({data}){
+function PieChartzzz(){
+
+  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
   let countArr = [
     { name: "daily", value: 0 },
