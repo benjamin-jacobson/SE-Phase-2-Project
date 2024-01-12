@@ -1,4 +1,49 @@
-# Readme: Software Engineering Phase 2 Project (MVP)
+# Software Engineering Phase 2 Project (MVP)
+
+- See below for project requirements
+- See here for video walktrough: TODO add
+
+### Initial Install
+- npx create-react-app goal-project --use-npm
+- npm install react-router-dom@^6.18.0
+- npm install recharts
+- npm install json-server
+- npm install date-fns
+
+### Initial application test
+- npm start
+- json-server --watch db.json --p 4000
+
+# Front-end Structure, Routing and Components
+
+- src
+    - App.js (Header, NavLink)
+    - components/
+        - Header.js (use of NavLink)
+        - Summary.js
+        - SummaryList.js
+        - GoalAddForm.js
+        - GoalLogForm.js
+        - BarChartOverTime.js
+        - Dropdown.js
+        - PiechartCategory.js 
+    - pages/
+        - AllGoals.js (Summary, SummaryList)
+        - AddGoal.js (GoalAddForm)
+        - LogGoal.js (GoalLogForm)
+        - Overview.js (PiechartCategory)
+        - Reports.js (Dropdown, BarChartOverTime)
+        - ErrorPage.js
+    - index.css
+    - index.js
+    - routes.js
+
+# Future Steps
+- Add grid layout to AllGoals.js
+- Add button/state/db request patch for goal completion
+- Better data design
+- Metric select, not freeform
+- NavLink to have CSS to show the selected page
 
 ### Project Requirements
 - https://github.com/learn-co-curriculum/react-hooks-phase-2-project
@@ -16,42 +61,6 @@ Upon return of json from your POST request, a state update by a setState functio
 Remember: responsibility for re-rendering the page to display the updated list of movies should belong to the addMovie function; depending on a subsequent action to load the new data is not best practice.
 
 5. Add some styling: you're encouraged to write your CSS from scratch, either by using styled components or writing CSS files and using id/className to style your elements. You can also incorporate a UI framework (like React Bootstrap, Semantic UI, or Material UI) if you prefer.
-
-### Initial Install
-- npx create-react-app goal-project --use-npm
-- npm install react-router-dom@^6.18.0
-- npm install recharts
-- npm install json-server
-- npm install date-fns
-
-### Initial application test
-- npm start
-- json-server --watch db.json --p 4000
-
-# Front-end Structure, Routing and Components
-src/
-├── App.js (Header, NavLink)
-├── components/
-    ├── Header.js (use of NavLink)
-    ├── Summary.js
-    ├── SummaryList.js
-    ├── GoalAddForm.js
-    ├── GoalLogForm.js
-    ├── BarChartOverTime.js
-    ├── Dropdown.js
-    ├── PiechartCategory.js 
-
-├── pages/
-    ├── AllGoals.js (Summary, SummaryList)
-    ├── AddGoal.js (GoalAddForm)
-    ├── LogGoal.js (GoalLogForm)
-    ├── Overview.js (PiechartCategory)
-    ├── Reports.js (Dropdown, BarChartOverTime)
-    ├── ErrorPage.js
-├── index.css
-├── index.js
-├── routes.js
-
 
 # Resources
 - https://github.com/learn-co-curriculum/react-hooks-forms-lab/tree/solution/src/components
