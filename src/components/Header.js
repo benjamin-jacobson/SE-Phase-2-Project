@@ -1,9 +1,8 @@
 import React from "react";
 import '../css/Header.css'
-// import NavBar from "../archive/NavBar";
 import { NavLink } from "react-router-dom";
 
-function Header({ isDarkMode, onDarkModeClick }) {
+function Header() {
 
   // const {data, AddGoalFunction} = useOutletContext();
 

@@ -1,20 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Outlet } from "react-router-dom";
-
-import './css/App.css'; // Import your CSS file for global styling
-
-
+import './css/App.css';
 import Header from './components/Header';
-import Summary from './components/Summary';
 
 function App(){
   const [data, setData] = useState([])
-  const [isDarkMode,setIsDarkMode] = useState(false)
-
-  function handleDarkModeClick() {
-    setIsDarkMode((isDarkMode) => !isDarkMode)
-  }
 
   useEffect(() => {
     const url = "http://localhost:4000/goals"
@@ -33,7 +24,7 @@ function App(){
   }
 
   function LogGoalFunction(updatedGoal){
-
+    // Updates the goal state, from add goal
     const updatedGoals = data.map((g) => {
       if (g.id === updatedGoal.id){
         return updatedGoal
@@ -50,7 +41,7 @@ function App(){
 
   return (
     <div className="app-container">
-      <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
+      <Header />
       <Outlet context={contextData}/>
     </div>
   );

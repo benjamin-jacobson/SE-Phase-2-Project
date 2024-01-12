@@ -30,8 +30,9 @@ Remember: responsibility for re-rendering the page to display the updated list o
 
 # Front-end Structure, Routing and Components
 src/
+├── App.js (Header, NavLink)
 ├── components/
-    ├── Header.js
+    ├── Header.js (use of NavLink)
     ├── Summary.js
     ├── SummaryList.js
     ├── GoalAddForm.js
@@ -46,7 +47,7 @@ src/
     ├── LogGoal.js (GoalLogForm)
     ├── Overview.js (PiechartCategory)
     ├── Reports.js (Dropdown, BarChartOverTime)
-    ├── ErrorPage.js ()
+    ├── ErrorPage.js
 ├── index.css
 ├── index.js
 ├── routes.js
