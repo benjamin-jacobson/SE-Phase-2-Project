@@ -6,7 +6,7 @@ function GoalLogForm(){
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
   const choices_goals = data.map((i) => {return i.goal})
 
-  // const animalOptions = data.map((i) => {return i.goal})
+  // State
   const [selectedGoal, setSelectedGoal] = useState('')
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -15,15 +15,13 @@ function GoalLogForm(){
   };
 
   const handleDateChange = (event) => {
-    const dateValue = event.target.value;  // The selected date available in the event.target.value
+    const dateValue = event.target.value
     setSelectedDate(dateValue);
-    // console.log(dateValue)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Selected goal for logging:', selectedGoal);
-    console.log(e.target.value) // this is just the goal name
 
     // Getting the ID from the form
     function findIdByKeyValue(key, value) {
@@ -32,18 +30,10 @@ function GoalLogForm(){
     }
     const idOfJane = findIdByKeyValue('goal', selectedGoal);
 
-
-    // let outputPatchedArray = [...data[idOfJane].datesGoalMet, selectedDate]
     let outputPatchedArray = [...data.find(item => item.id === idOfJane)?.datesGoalMet, selectedDate]
-
-    console.log("carrrrrtttddgsgsfgf")
-    console.log(outputPatchedArray);
-    console.log("carrrrrtttddgsgsfgf")
-    // setData(modifiedEmployees)
-
     let ouputData = {idOfJane, selectedDate}
 
-    // UPDATE PATCH based on ID add date to array // Get the array using state, and update it.. who goal item or just key/value pair needed to update? TODO
+    // DB Patch/Update
     let url = `http://localhost:4000/goals/${idOfJane}`
     fetch(url,{
         method: "PATCH",
@@ -75,8 +65,6 @@ function GoalLogForm(){
         onChange={handleDateChange}
         required
       />
-
-
       <button type="submit">Submit</button>
       </form>
       </div>

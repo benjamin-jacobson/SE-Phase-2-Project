@@ -3,8 +3,6 @@ import { useOutletContext } from 'react-router-dom';
 import GoalLogForm from '../components/GoalLogForm';
 
 function LogGoal() {
-
-  // using App outlet to get data
   
     return (
       <>

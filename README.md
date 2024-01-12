@@ -31,9 +31,10 @@ Remember: responsibility for re-rendering the page to display the updated list o
 # Rough In Frame-work
 src/
 ├── components/
+    ├── GoalLogForm.js
     ├── BarChartOverTime.js
     ├── PiechartCategory.js 
-    ├── Dropdown.js 
+    ├── Dropdown.js
     ├── NavBar.js
     ├── NavBar.css
     ├── Header.js
@@ -41,10 +42,9 @@ src/
     ├── Goal.js
 	
 └── pages/
-    ├── Home.js
-    ├── ControlledFormAddGoal.js
-    ├── GoalsDisplay.js
-    ├── GoalsDisplayByCategory.js -- Piechart ... Barchart Over Time?
+    ├── AllGoals.js
+    ├── AddGoal.js ()
+    ├── LogGoal.js (GoalLogForm)
     ├── Overview.js (PiechartCategory)
     ├── Reports.js (Dropdown, BarChartOverTime)
     ├── ErrorPage.js (Dropdown, BarChartOverTime)
