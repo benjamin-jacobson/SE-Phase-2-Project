@@ -7,15 +7,21 @@ import Dropdown from "../components/Dropdown";
 function Reports() {
 
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
-  const [newData,setNewData] = useState([])
-
 
   const choices_goals = data.map((i) => {return i.goal}) // TODO Rough in... Use goals, and get id to filter the timeplot
 
-  const [selectedGoal, setSelectedGoal] = useState(null);
+  const [selectedGoal, setSelectedGoal] = useState(data[0].goal);
+  const [selectedGoalId, setSelectedGoalId] = useState(data[0].id);
   const handleSelect = (g) => {
     setSelectedGoal(g);
     // Do something with the selected fruit, e.g., update state or perform an action
+    const selectedGoalId = data.map((h) => {
+      if (h.goal === g){
+        console.log(h.id)
+        setSelectedGoalId(h.id)
+        
+      } 
+    });
 
   };
 
@@ -26,7 +32,7 @@ function Reports() {
           <div>
           <Dropdown options={choices_goals} onSelect={handleSelect} />
         </div>
-          <BarPlotOverTime data={newData} goalToShow={selectedGoal}/>
+          <BarPlotOverTime data={data} goalToShow={selectedGoal} goalToShowId={selectedGoalId}/>
           {/* <PieChartzzz data={newData} /> */}
         </main>
       </>

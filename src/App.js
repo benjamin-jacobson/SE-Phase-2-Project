@@ -33,15 +33,7 @@ function App(){
   }
 
   function LogGoalFunction(updatedGoal){
-    // console.log(x)
-    // console.log(data)
-    // console.log("----")
 
-    // const modifiedEmployees = data.map(obj => {
-    //   if (obj.id === x.idOfJane) {
-    //       return { ...obj, datesGoalMet: [...obj.datesGoalMet, x.selectedDate]};
-    //   }
-    //   return obj;
     const updatedGoals = data.map((g) => {
       if (g.id === updatedGoal.id){
         return updatedGoal

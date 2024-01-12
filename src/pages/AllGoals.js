@@ -3,27 +3,15 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 function AllGoals() {
-  // let data = useOutletContext()
-  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();   // make it just this TODO get rid of useeffect
 
-  const [data2, setData2] = useState([])
-  useEffect(() => {
-    const url = "http://localhost:4000/goals"
-    fetch(url,
-      {method: "GET",
-      headers: {"Content-Type":"application/json"}
-    })
-    .then((res) => res.json())
-    .then((dataa) => setData2(dataa))
-    .catch(error => console.error(error));
-  },[])
+  const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();   // make it just this TODO get rid of useeffect
 
   return (
     <>
       <main>
         <h1> I am the goal machine. 
         </h1>
-        <Summary data = {data2}/>
+        <Summary data = {data}/>
         
       </main>
     </>
