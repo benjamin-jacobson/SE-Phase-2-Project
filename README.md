@@ -32,7 +32,7 @@ Remember: responsibility for re-rendering the page to display the updated list o
 # Rough In Frame-work
 src/
 ├── components/
-    ├── BarChartOverTime.js.js
+    ├── BarChartOverTime.js
     ├── Piechart.js 
     ├── NavBar.js
     ├── NavBar.css
@@ -46,6 +46,7 @@ src/
     ├── GoalsDisplay.js
     ├── GoalsDisplayByCategory.js -- Piechart ... Barchart Over Time?
     ├── GoalsDisplayJustOne.js
+    ├── Reports.js (BarChartOverTime)
 ├── index.css
 ├── index.js
 ├── routes.js

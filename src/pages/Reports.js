@@ -1,6 +1,5 @@
 import { useOutletContext } from "react-router-dom";
 import BarPlotOverTime from "../components/BarChartOverTime";
-import PieChartzzz from "../components/PieChartzzz";
 import { useState, useEffect } from "react";
 import Dropdown from "../components/Dropdown";
 
@@ -12,28 +11,26 @@ function Reports() {
 
   const [selectedGoal, setSelectedGoal] = useState(data[0].goal);
   const [selectedGoalId, setSelectedGoalId] = useState(data[0].id);
+
   const handleSelect = (g) => {
+    // Setting Selected Goal and its id in state
     setSelectedGoal(g);
-    // Do something with the selected fruit, e.g., update state or perform an action
+
     const selectedGoalId = data.map((h) => {
       if (h.goal === g){
-        console.log(h.id)
         setSelectedGoalId(h.id)
-        
       } 
     });
-
   };
 
     return (
       <>
         <main>
-          <h1>Select a goal to see actions towards ...</h1>
+          <h2>Select a goal to see actions towards it!</h2>
           <div>
           <Dropdown options={choices_goals} onSelect={handleSelect} />
         </div>
           <BarPlotOverTime data={data} goalToShow={selectedGoal} goalToShowId={selectedGoalId}/>
-          {/* <PieChartzzz data={newData} /> */}
         </main>
       </>
     );

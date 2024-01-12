@@ -30,7 +30,7 @@ function BarPlotOverTime({goalToShow, goalToShowId}){
   // If datesGoalMet, setting to a fake value 3
   arrayOfDatesWithValues.forEach(dd => {
     if (goalSelectedObject.datesGoalMet.includes(dd.date)) {
-      dd.value = 3;
+      dd.value = 3;  // with a better database use the value that is in it when applicable.
     }
   });
 
@@ -41,23 +41,23 @@ if (goalSelectedObjectFakeValues.length > 0){
   return (
     <div>
     <div>
-    <h2>{`Bar Plot Over Time: ${goalToShow}`}</h2>
+    <h3>{`Bar Plot Over Time: ${goalToShow}`}</h3>
     <BarChart width={600} height={300} data={arrayOfDatesWithValues}>
       <XAxis dataKey="date" type="category" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="value" fill="#8884d8" />
+      <Bar dataKey="value" fill="#368BC1" />
     </BarChart>
   </div>
     <div>
-      <h2>{`Bar Plot Over Time: ${goalToShow}`}</h2>
+      <h3>{`Bar Plot Over Time: ${goalToShow}`}</h3>
       <BarChart width={600} height={300} data={goalSelectedObjectFakeValues}>
         <XAxis dataKey="date" type="category" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="value" fill="#8884d8" />
+        <Bar dataKey="value" fill="#368BC1" />
       </BarChart>
     </div>
     </div>
