@@ -34,8 +34,7 @@ function BarPlotOverTime({goalToShow, goalToShowId}){
     }
   });
 
-console.log(arrayOfDatesWithValues)
-
+// Conditional Rending of Component based on if goal action
 if (goalSelectedObjectFakeValues.length > 0){
 
   return (

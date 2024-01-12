@@ -26,14 +26,14 @@ Remember: responsibility for re-rendering the page to display the updated list o
 
 ### Initial application test
 - npm start
-- json-server --watch db.json --p 3000
-
+- json-server --watch db.json --p 4000
 
 # Rough In Frame-work
 src/
 ├── components/
     ├── BarChartOverTime.js
-    ├── Piechart.js 
+    ├── PiechartCategory.js 
+    ├── Dropdown.js 
     ├── NavBar.js
     ├── NavBar.css
     ├── Header.js
@@ -45,8 +45,9 @@ src/
     ├── ControlledFormAddGoal.js
     ├── GoalsDisplay.js
     ├── GoalsDisplayByCategory.js -- Piechart ... Barchart Over Time?
-    ├── GoalsDisplayJustOne.js
-    ├── Reports.js (BarChartOverTime)
+    ├── Overview.js (PiechartCategory)
+    ├── Reports.js (Dropdown, BarChartOverTime)
+    ├── ErrorPage.js (Dropdown, BarChartOverTime)
 ├── index.css
 ├── index.js
 ├── routes.js
