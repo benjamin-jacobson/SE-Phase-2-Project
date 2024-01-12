@@ -28,28 +28,30 @@ Remember: responsibility for re-rendering the page to display the updated list o
 - npm start
 - json-server --watch db.json --p 4000
 
-# Rough In Frame-work
+# Front-end Structure, Routing and Components
 src/
 ├── components/
+    ├── Header.js
+    ├── Summary.js
+    ├── SummaryList.js
+    ├── GoalAddForm.js
     ├── GoalLogForm.js
     ├── BarChartOverTime.js
-    ├── PiechartCategory.js 
     ├── Dropdown.js
-    ├── NavBar.js
-    ├── NavBar.css
-    ├── Header.js
-    ├── GoalForm.js
-    ├── Goal.js
-	
-└── pages/
-    ├── AllGoals.js
-    ├── AddGoal.js ()
+    ├── PiechartCategory.js 
+
+├── pages/
+    ├── AllGoals.js (Summary, SummaryList)
+    ├── AddGoal.js (GoalAddForm)
     ├── LogGoal.js (GoalLogForm)
     ├── Overview.js (PiechartCategory)
     ├── Reports.js (Dropdown, BarChartOverTime)
-    ├── ErrorPage.js (Dropdown, BarChartOverTime)
+    ├── ErrorPage.js ()
 ├── index.css
 ├── index.js
 ├── routes.js
 
-https://github.com/learn-co-curriculum/react-hooks-forms-lab/tree/solution/src/components
+
+# Resources
+- https://github.com/learn-co-curriculum/react-hooks-forms-lab/tree/solution/src/components
+- https://recharts.org/en-US/examples/MixBarChart

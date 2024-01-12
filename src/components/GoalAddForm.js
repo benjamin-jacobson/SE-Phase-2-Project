@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
-const MyForm = () => {
+const GoalAddForm = () => {
 
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
-  // State to manage form data
   const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
+  // State 
   const [formData, setFormData] = useState({
     goal: '',
     metric: '',
@@ -30,8 +30,7 @@ const MyForm = () => {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform actions with the form data here (e.g., send it to a server)
-    console.log('Form submitted with data:', formData);
+    // console.log('Form submitted with data:', formData);
 
     // Posting data
     const goalsUrl = "http://localhost:4000/goals"
@@ -97,4 +96,4 @@ const MyForm = () => {
   );
 };
 
-export default MyForm;
+export default GoalAddForm;
