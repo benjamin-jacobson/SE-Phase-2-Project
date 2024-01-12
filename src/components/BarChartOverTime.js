@@ -7,7 +7,6 @@ function BarPlotOverTime({goalToShow, goalToShowId}){
 
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
-
     console.log("testsssxxxxx")
     console.log(goalToShowId)
     const desiredObject = data.find(obj => obj.id === goalToShowId);
@@ -20,33 +19,25 @@ function BarPlotOverTime({goalToShow, goalToShowId}){
     console.log(dataFake);
 
 
-  // // Fake data and array of dates
-  // const dataFake = [   //// Need to convert the goal to this
-  //   { date: "2023-01-01", value: 10 },
-  //   { date: "2023-01-02", value: 10 },
-  //   { date: "2023-01-03", value: 10 },
-  //   { date: "2023-01-04", value: 10 },
-  //   { date: "2023-01-18", value: 10 },
-  //   { date: "2023-01-19", value: 10 },
-  //   { date: "2023-02-01", value: 20 },
-  //   { date: "2023-03-01", value: 15 },
-  //   { date: "2023-04-01", value: 25 },
-  //   { date: "2023-04-02", value: 0 },
-  //   { date: "2023-04-03", value: 0 },
-  //   { date: "2023-04-05", value: 25 },
-  //   { date: "2023-04-04", value: 25 },
-  // ];
-  
+// // const startDate = new Date('2023-12-31');
+// const startDate = desiredObject.datesGoalMet[0]
+// const endDate = new Date();
 
+// const dateArray = eachDayOfInterval({ start: startDate, end: endDate });
+// const formattedDateArray = dateArray.map(date => format(date, 'yyyy-MM-dd'));
+// const dataFake2 = formattedDateArray.map(date => ({ date, value: 0 }));
+// dataFake2.sort((a, b) => new Date(a.date) - new Date(b.date));
+// console.log("nnnnenenen")
+// console.log(dataFake2);
 
-
-const startDate = new Date('2023-12-31');
-const endDate = new Date();
-
-const dateArray = eachDayOfInterval({ start: startDate, end: endDate });
-const formattedDateArray = dateArray.map(date => format(date, 'yyyy-MM-dd'));
-console.log("nnnnenenen")
-console.log(formattedDateArray);
+// for (const d of desiredObject.datesGoalMet) {
+//   const updatedArray = dataFake2.map(obj => {
+//     if (obj.date === d) {
+//       return { ...obj, value: 1 };
+//     }
+//     return obj;
+//   });
+// }
 
 if (dataFake.length > 0){
   return (
@@ -62,7 +53,6 @@ if (dataFake.length > 0){
       </BarChart>
     </div>
   )} else {return <p>There are no actions toward this goal ¯\_(ツ)_/¯</p>}
-
 };
 
 export default BarPlotOverTime;
