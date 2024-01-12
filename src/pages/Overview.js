@@ -1,6 +1,6 @@
 import PieChartzzz from "../components/PieChartzzz";
 
-function About() {
+function Overview() {
     return (
       <>
         <main>
@@ -12,4 +12,4 @@ function About() {
     );
   };
   
-  export default About;
+  export default Overview;

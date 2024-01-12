@@ -32,7 +32,7 @@ Remember: responsibility for re-rendering the page to display the updated list o
 # Rough In Frame-work
 src/
 ├── components/
-    ├── Barchart.js
+    ├── BarChartOverTime.js.js
     ├── Piechart.js 
     ├── NavBar.js
     ├── NavBar.css

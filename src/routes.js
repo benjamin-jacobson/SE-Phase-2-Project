@@ -1,6 +1,6 @@
 import App from "./App";
 import AddGoal from "./pages/AddGoal";
-import About from "./pages/About";
+import Overview from "./pages/Overview";
 import LogGoal from "./pages/LogGoal";
 import Reports from "./pages/Reports";
 import AllGoals from "./pages/AllGoals";
@@ -22,8 +22,8 @@ const routes = [
         element: <LogGoal />
         },
         {
-            path: "/about",
-            element:<About />
+            path: "/overview",
+            element:<Overview />
         },
         {
             path: "/reports",

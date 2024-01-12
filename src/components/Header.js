@@ -28,8 +28,8 @@ function Header({ isDarkMode, onDarkModeClick }) {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/about" activeClassName="active-link">
-              About
+            <NavLink exact to="/Overview" activeClassName="active-link">
+            Overview
             </NavLink>
           </li>
           <li>

@@ -5,71 +5,44 @@ import { useOutletContext } from 'react-router-dom';
 
 function BarPlotOverTime({goalToShow, goalToShowId}){
 
+  // Getting data 
   const {data, AddGoalFunction, LogGoalFunction} = useOutletContext();
 
-    // console.log("testsssxxxxx")
-    // console.log(goalToShowId)
-    const desiredObject = data.find(obj => obj.id === goalToShowId);
-    // console.log(desiredObject.datesGoalMet);
+  // Selecting Goal to show
+  const goalSelectedObject = data.find(obj => obj.id === goalToShowId);
 
-    const dataFake = desiredObject.datesGoalMet.map(date => ({ date, value: 10 }));
-    dataFake.sort((a, b) => new Date(a.date) - new Date(b.date));
+  const goalSelectedObjectFakeValues = goalSelectedObject.datesGoalMet.map(date => ({ date, value: 10 }));
+  goalSelectedObjectFakeValues.sort((a, b) => new Date(a.date) - new Date(b.date));
     
-    // console.log("dog")
-    // console.log(dataFake);
 
+  // Function for prepraring the array of objects for recharts data layout
+  function getDatesBetween(startDate, endDate) {
+    const interval = { start: startDate, end: new Date(endDate) }; // TODO fix the 1 day issue
+    return eachDayOfInterval(interval).map(date => format(date, 'yyyy-MM-dd'));
+  };
 
-// const startDate = new Date('2023-12-31');
-const startDate = desiredObject.creationDate
-const endDate = format(new Date(), 'yyyy-MM-dd')
-const dateArray = eachDayOfInterval({ start: startDate, end: endDate });
-console.log("yyyy")
-console.log(startDate)
-// console.log(endDate)
-// console.log(dateArray)
+  const startDate = goalSelectedObject.creationDate
+  const today = format(new Date(), 'yyyy-MM-dd');
+  const arrayOfDates = getDatesBetween(startDate, today); // using function
+  arrayOfDates.sort((a, b) => new Date(b.date) - new Date(a.date)); // sorting
+  const arrayOfDatesWithValues = arrayOfDates.map(date => ({ date, value: 0 })); // adding 0 value
 
-function getDatesBetween(startDate, endDate) {
-  const interval = { start: startDate, end: new Date(endDate) };
-  console.log(interval)
-  return eachDayOfInterval(interval).map(date => format(date, 'yyyy-MM-dd'));
-};
+  // If datesGoalMet, setting to a fake value 3
+  arrayOfDatesWithValues.forEach(dd => {
+    if (goalSelectedObject.datesGoalMet.includes(dd.date)) {
+      dd.value = 3;
+    }
+  });
 
-const today = format(new Date(), 'yyyy-MM-dd');
-const arrayOfDates = getDatesBetween(startDate, today); // using function
-arrayOfDates.sort((a, b) => new Date(b.date) - new Date(a.date));
-const newStuff = arrayOfDates.map(date => ({ date, value: 0 }));
+console.log(arrayOfDatesWithValues)
 
-newStuff.forEach(dd => {
-  if (desiredObject.datesGoalMet.includes(dd.date)) {
-    dd.value = 3;
-  }
-});
-
-console.log(newStuff)
-
-// const formattedDateArray = dateArray.map(date => format(date, 'yyyy-MM-dd'));
-// const dataFake2 = formattedDateArray.map(date => ({ date, value: 0 }));
-// dataFake2.sort((a, b) => new Date(a.date) - new Date(b.date));
-// console.log("nnnnenenen")
-// console.log(dataFake2);
-
-// for (const d of desiredObject.datesGoalMet) {
-//   const updatedArray = dataFake2.map(obj => {
-//     if (obj.date === d) {
-//       return { ...obj, value: 1 };
-//     }
-//     return obj;
-//   });
-
-// Conditional Return 
-
-if (dataFake.length > 0){
+if (goalSelectedObjectFakeValues.length > 0){
 
   return (
     <div>
     <div>
     <h2>{`Bar Plot Over Time: ${goalToShow}`}</h2>
-    <BarChart width={600} height={300} data={newStuff}>
+    <BarChart width={600} height={300} data={arrayOfDatesWithValues}>
       <XAxis dataKey="date" type="category" />
       <YAxis />
       <Tooltip />
@@ -79,7 +52,7 @@ if (dataFake.length > 0){
   </div>
     <div>
       <h2>{`Bar Plot Over Time: ${goalToShow}`}</h2>
-      <BarChart width={600} height={300} data={dataFake}>
+      <BarChart width={600} height={300} data={goalSelectedObjectFakeValues}>
         <XAxis dataKey="date" type="category" />
         <YAxis />
         <Tooltip />
@@ -89,7 +62,9 @@ if (dataFake.length > 0){
     </div>
     </div>
 
-  )} else {return <p>There are no actions toward this goal ¯\_(ツ)_/¯</p>}
+  )} else {
+    return <p>There are no actions toward this goal ¯\_(ツ)_/¯</p>
+  }
 };
 
 export default BarPlotOverTime;

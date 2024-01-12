@@ -60,6 +60,29 @@
       "completed": false,
       "creationDate": "2024-01-06",
       "id": 5
+    },
+    {
+      "goal": "Be good",
+      "metric": "y/n",
+      "category": "bucketlist",
+      "datesGoalMet": [
+        "2024-01-12"
+      ],
+      "completed": false,
+      "creationDate": "2024-01-12",
+      "id": 6
+    },
+    {
+      "goal": "Play Tennis",
+      "metric": "adfga",
+      "category": "monthly",
+      "datesGoalMet": [
+        "2024-01-02",
+        "2024-01-04"
+      ],
+      "completed": false,
+      "creationDate": "2024-01-01",
+      "id": 7
     }
   ],
   "animals": [
