@@ -44,8 +44,13 @@
 - Better data design
 - Metric select, not freeform
 - NavLink to have CSS to show the selected page
+- Limit appropriate adds/logs to time that makes sense (can log a goal in the future, plan feature?)
 
-### Project Requirements
+# Resources
+- https://github.com/learn-co-curriculum/react-hooks-forms-lab/tree/solution/src/components
+- https://recharts.org/en-US/examples/MixBarChart
+
+# Project Requirements
 - https://github.com/learn-co-curriculum/react-hooks-phase-2-project
 
 1. You must make a single page application (only one index.html file) using create-react-app.
@@ -61,7 +66,3 @@ Upon return of json from your POST request, a state update by a setState functio
 Remember: responsibility for re-rendering the page to display the updated list of movies should belong to the addMovie function; depending on a subsequent action to load the new data is not best practice.
 
 5. Add some styling: you're encouraged to write your CSS from scratch, either by using styled components or writing CSS files and using id/className to style your elements. You can also incorporate a UI framework (like React Bootstrap, Semantic UI, or Material UI) if you prefer.
-
-# Resources
-- https://github.com/learn-co-curriculum/react-hooks-forms-lab/tree/solution/src/components
-- https://recharts.org/en-US/examples/MixBarChart

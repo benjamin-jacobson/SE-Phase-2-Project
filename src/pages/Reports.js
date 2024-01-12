@@ -26,7 +26,7 @@ function Reports() {
     return (
       <>
         <main>
-          <h2>Select a goal to see actions towards it!</h2>
+          <h1>Select a goal to see actions towards it!!</h1>
           <div>
           <Dropdown options={choices_goals} onSelect={handleSelect} />
         </div>

@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <header className="header-container">
-      <h1 className="logo">💗 Goalster MVP  💗</h1>
+      <h1 className="logo">💙 Goalster Prototype</h1>
       <nav>
         <ul className="nav-links">
           <li>

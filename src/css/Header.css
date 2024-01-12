@@ -1,5 +1,5 @@
 .header-container {
-    background-color: #f8eded;
+    background-color: #95c5d4;
     color: rgb(104, 92, 92);
     padding: 10px;
   }
@@ -16,10 +16,10 @@
   
   .nav-links a {
     text-decoration: none;
-    color: rgb(234, 19, 19);
+    color: rgb(15, 2, 2);
   }
   
   .active-link {
     font-weight: bold;
-    color: rgb(49, 15, 172);
+    color: rgb(15, 172, 78);
   }
