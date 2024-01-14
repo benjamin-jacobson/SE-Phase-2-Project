@@ -1,7 +1,7 @@
 # Software Engineering Phase 2 Project (MVP)
 
 - See below for project requirements
-- See here for video walktrough: TODO add
+- See here for video walktrough: https://youtu.be/qbEZoNq-8Zc
 
 ### Initial Install
 - npx create-react-app goal-project --use-npm
